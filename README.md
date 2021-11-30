@@ -4,12 +4,12 @@ This is a small Processing-Sketch, that automatically generates all the `<srcset
 
 # How to use?
 
-#. Define necessary `<srcset>`-Values.
-#. Prepare a single directory containing all the base-images, for which variations -- based on `<srcset>`-Values -- need to be generated.
-#. Input `<srcset>`-Values into the `imageSizes`-Array.
-#. Input the _Source Directory_ in `sourcePathName`.
-#. Input the _Target Directory_ in `targetPathName`.
-#. Hit the "Play"-Button.
+1. Define necessary `<srcset>`-Values.
+2. Prepare a single directory containing all the base-images, for which variations -- based on `<srcset>`-Values -- need to be generated.
+3. Input `<srcset>`-Values into the `imageSizes`-Array.
+4. Input the _Source Directory_ in `sourcePathName`.
+5. Input the _Target Directory_ in `targetPathName`.
+6. Hit the "Play"-Button.
 
 # Notes 
 
