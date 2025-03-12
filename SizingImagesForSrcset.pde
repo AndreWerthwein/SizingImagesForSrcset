@@ -21,8 +21,6 @@ void draw() {
     
     String fileName = getFileName(x);
     String directoryName = fileName.substring(0, (fileName.length() - 2)) + "/";
-    
-    println("Current Project-Directory: " + directoryName);
       
     generateImages(directoryName, fileName, original);
   }

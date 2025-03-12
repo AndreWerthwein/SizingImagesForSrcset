@@ -1,9 +1,13 @@
 void generateImages(String directoryName, String fileName, PImage image) {
-  int[] imageSizes = {2400, 1920, 1440, 1200, 1024, 780};
+  println("Current Base-Image: " + fileName);
   
-  for (int y = 0; y < imageSizes.length; y++) {
+  int[] imageSizes = {2400, 1920, 1440, 1200, 1024, 780}; 
+  
+  for (int i = 0; i < imageSizes.length; i++) {
+    if (image.width > imageSizes[i] || image.width == imageSizes[i]) {
       image(image, 0, 0);
-      image.resize(imageSizes[y], 0);
-      image.save(targetPathName + directoryName + fileName + "-" + imageSizes[y] + ".jpg");
+      image.resize(imageSizes[i], 0);
+      image.save(targetPathName + directoryName + fileName + "-" + imageSizes[i] + ".jpg");
     }
+  }
 } // generate images based on given sizes
