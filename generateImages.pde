@@ -1,13 +1,19 @@
 void generateImages(String directoryName, String fileName, PImage image) {
   println("Current Base-Image: " + fileName);
   
-  int[] imageSizes = {2400, 1920, 1440, 1200, 1024, 780}; 
+  int[] sizesOrientationLandscape = {2560, 2048, 1600, 1024, 640};
+  int[] sizesOrientationPortrait = {2048, 1600, 1024, 768, 480};
   
-  for (int i = 0; i < imageSizes.length; i++) {
-    if (image.width > imageSizes[i] || image.width == imageSizes[i]) {
+  // using the appropriate sizes depending on image orientation
+  int[] sizes = isOrientationLandscape(image) ? sizesOrientationLandscape : sizesOrientationPortrait;
+  
+  for (int i = 0; i < sizes.length; i++) {
+    if (image.width > sizes[i] || image.width == sizes[i]) {
       image(image, 0, 0);
-      image.resize(imageSizes[i], 0);
-      image.save(targetPathName + directoryName + fileName + "-" + imageSizes[i] + ".jpg");
+      image.resize(sizes[i], 0);
+      image.save(targetPathName + directoryName + fileName + "-" + sizes[i] + ".jpg");
+    } else {
+      print("Attention: The base-image '" + fileName + "' was skipped at the size '" + sizes[i] + "' since the size of the base-image is insufficient."); 
     }
   }
 } // generate images based on given sizes
