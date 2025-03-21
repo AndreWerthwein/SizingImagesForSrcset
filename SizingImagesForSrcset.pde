@@ -1,8 +1,8 @@
 // enter path to source directory here:
-String sourcePathName = "C:/Users/andre/Desktop/affriolante/";
+String sourcePathName = "";
 
 // enter path to target directory here:
-String targetPathName = "C:/Users/andre/Desktop/affriolante/";
+String targetPathName = "";
 
 java.io.File folder = new java.io.File(dataPath(sourcePathName));
 String[] imagesInDirectory = folder.list();
