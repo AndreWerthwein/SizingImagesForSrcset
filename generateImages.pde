@@ -1,8 +1,8 @@
 void generateImages(String directoryName, String fileName, PImage image) {
   println("Current Base-Image: " + fileName);
   
-  int[] sizesOrientationLandscape = {2560, 2048, 1600, 1024, 640};
-  int[] sizesOrientationPortrait = {2048, 1600, 1024, 768, 480};
+  int[] sizesOrientationLandscape = {2048, 1600, 1024, 640};
+  int[] sizesOrientationPortrait = {1600, 1024, 768, 480};
   
   // using the appropriate sizes depending on image orientation
   int[] sizes = isOrientationLandscape(image) ? sizesOrientationLandscape : sizesOrientationPortrait;
